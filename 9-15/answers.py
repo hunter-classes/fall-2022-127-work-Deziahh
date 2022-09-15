@@ -47,3 +47,20 @@ print(is_even(2))
 print(is_odd(9))
 print(is_rightangled(a,b,c))
 print(is_rightangled_two(a,b,c))
+
+#coding bat:
+    #hello_name:
+def hello_name(name):
+  return 'Hello ' + name + '!'
+
+    #make_out_word
+def make_out_word(out, word):
+    return out[0:2] + word + out[2:]
+
+    #first_two
+def first_two(str):
+   length = len(str)
+   if length <= 2:
+       return str
+   else:
+       return str[:2]
