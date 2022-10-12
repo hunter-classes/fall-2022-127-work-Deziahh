@@ -1,13 +1,15 @@
 """
 1. Write a function to find the smallest value in a listKfind smallest in a list of items
 """
-def findSmallest(list):
-    list2 = min(list)
-    result = print(list2)
-    return result
+def findSmallest(l):
+    list2 = min(l)
+    
+    return list2
 
-list0 = [1,2,3,4,5]
-findSmallest(list0)
+#Test
+list = [1,2,3,4,5]
+result = findSmallest(list)
+print("#1. ",list, "->", result)
     
 """
 2. Write a function that returns a new list that contains all the odd items in the original list
@@ -17,11 +19,12 @@ def newList(list):
     for odd in list:
         if odd%2 != 0:
             secondList.append(odd)
-    result = print(secondList)
-    return result
+    return secondList
 
+#Test
 list1 = [1,2,3,4,5]
-newList(list1)
+result = newList(list1)
+print("#2. ",list1, "->",result)
 
 """
 3. Write a function that takes a string and returns a new string where all the words are capitalized.
@@ -41,7 +44,7 @@ def capitalize_each_word(original_str):
     
 sample = "oh happy day"
 result = capitalize_each_word(sample)
-print(result)
+print("#3. ",sample, "->",result)
 """
 4. Write a function that takes a string and returns a new string with every word that's longer than 5 character turned into upper case
 """
@@ -52,11 +55,12 @@ def squared(list):
     finalList = []
     for i in list:
         finalList.append(i ** 2)
-    result = print(finalList)
-    return result
+    
+    return finalList
 
 sq = [2,3,4]
-squared(sq)
+result = squared(sq)
+print("#5. ", sq, "->", result)
 """
 6. Write a function that takes two lists of numbers and returns a new list where each item is the corresponding values of the original
 lists added together. Ex [1,2,3] and [10,20,30] would return the list [11,22,33]
@@ -66,12 +70,13 @@ def addLists(list1, list2):
     for i in range(len(list1)):
         ab = list1[i] + list2[i]
         l3.append(ab)
-    result = print(l3)
-    return result
+    
+    return l3
 
 l1 = [1,2,3]
 l2 = [1,2,3]
-addLists(l1, l2)
+result = addLists(l1, l2)
+print("#6. ",l1, l2, "->", result)
 """
 7. chapter 10 # 10: Count how many words in a list have length 5.
 """
@@ -81,13 +86,13 @@ def count(string):
     for word in seperate:
         if len(word) == 5:
             word_count += 1
-    result = print(word_count)
-    return result
+    
+    return word_count
 
 s = "My name is Deziah. There are no words there."
 s2 = "Happy Day Love Juice Nasty"
-count(s)
-count(s2)
+result = count(s2)
+print("#7. ", s2, "->", result)
 """
 8. chapter 10 #11: Sum all the elements in a list up to but not including the first even number.
 """       
@@ -96,13 +101,15 @@ count(s2)
 """
 def samCount(list):
     keyWord = "sam"
+    keyWord2 = "Sam"
     count = 0
     for i in list:
         count += 1
-        if i == keyWord:
+        if i == keyWord or i == keyWord2:
             break
-    result = print(count)
-    return result
+    
+    return count
 
-words = ["savior", "sound", "song","sam","song"]
-samCount(words)
+words = ["savior", "sound", "song","Sam","song"]
+result = samCount(words)
+print("#9. ", words, "->", result)
