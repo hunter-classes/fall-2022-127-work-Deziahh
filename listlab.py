@@ -45,25 +45,33 @@ print(result)
 """
 4. Write a function that takes a string and returns a new string with every word that's longer than 5 character turned into upper case
 """
-"""def stringCount(string):
-    nString = string.split()
-    for word in nString:
-        if len(word) > 5:
-            word2 = word.upper()
-            
-    result = print(word2)
-    return result
-
-s3 = "There is there"
-stringCount(s3)"""
-    
 """
 5. Write a function that takes a list of numbers and returns a new list with each item squared
 """
+def squared(list):
+    finalList = []
+    for i in list:
+        finalList.append(i ** 2)
+    result = print(finalList)
+    return result
+
+sq = [2,3,4]
+squared(sq)
 """
 6. Write a function that takes two lists of numbers and returns a new list where each item is the corresponding values of the original
 lists added together. Ex [1,2,3] and [10,20,30] would return the list [11,22,33]
 """
+def addLists(list1, list2):
+    l3 = []
+    for i in range(len(list1)):
+        ab = list1[i] + list2[i]
+        l3.append(ab)
+    result = print(l3)
+    return result
+
+l1 = [1,2,3]
+l2 = [1,2,3]
+addLists(l1, l2)
 """
 7. chapter 10 # 10: Count how many words in a list have length 5.
 """
@@ -86,3 +94,15 @@ count(s2)
 """
 9. chapter 10 #12: Count how many words occur in a list up to and including the first occurrence of the word “sam”.
 """
+def samCount(list):
+    keyWord = "sam"
+    count = 0
+    for i in list:
+        count += 1
+        if i == keyWord:
+            break
+    result = print(count)
+    return result
+
+words = ["savior", "sound", "song","sam","song"]
+samCount(words)
