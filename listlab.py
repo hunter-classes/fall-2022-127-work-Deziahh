@@ -48,6 +48,19 @@ print("#3. ",sample, "->",result)
 """
 4. Write a function that takes a string and returns a new string with every word that's longer than 5 character turned into upper case
 """
+def fiveString(string):
+    secondString = " "
+    sString = string.split()
+    for word in sString:
+        if len(word) > 5:
+            newWord = word.upper()
+            secondString += " " + newWord
+            
+    return secondString
+    
+ss = "theres the theirs"
+result = fiveString(ss)
+print("#4. ",ss,"->",result)
 """
 5. Write a function that takes a list of numbers and returns a new list with each item squared
 """
