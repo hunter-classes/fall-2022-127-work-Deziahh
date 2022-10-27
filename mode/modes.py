@@ -5,15 +5,14 @@ list = [1,4,3,2]
 result = findLargest(list)
 print(list, "->", result)
 
-def freq(l, v):
+def freq(list, v):
     count = 0
-    for i in range(len(l)):
-        if val == l[i]:
+    for i in list:
+        if i == v:
             count += 1
     
     return count
 
 list = [1,2,2,3,4]
-val = 2
-result = freq(list, val)
+result = freq(list, 2)
 print(list, "->", result)
