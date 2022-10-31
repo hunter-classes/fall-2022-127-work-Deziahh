@@ -34,6 +34,7 @@ madlibList = [sentence.replace("blankNoun", random.choice(nouns)) for sentence i
 madlibList = [sentence.replace("blankAnimal", random.choice(animals)) for sentence in madlibList]
 madlibList = [sentence.replace("blankFood", random.choice(food)) for sentence in madlibList]
 
-print(madlibList)
+x = " ".join(madlibList)
+print(x)
 
 f.close()
