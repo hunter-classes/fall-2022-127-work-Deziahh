@@ -3,14 +3,14 @@
 
 import random
 
-names = ["Deziah", "Andrea", "Ally", "Sam"]
+names = ["Deziah", "Andrea", "Ally", "Sam", "David", "Max"]
 rooms = ["living rooom", "bedroom", "dining room"]
 adjectives = ["silly", "enormous", "fun","fantastic"]
 verbs = ["destroyed", "earned", "accepted", "offer", "behaved"]
 adverbs = ["slowly", "yesterday", "today", "rarely"]
 nouns = ["dog", "hammer", "cat", "car"]
 animals = ["puppy", "kitten", "mouse"]
-food = ["pizza", "cheeseburgers", "salmon"]
+food = ["pizza", "cheeseburgers", "salmon", "rice", "chicken"]
 
 randomName = random.choice(names)
 names.remove(randomName)
