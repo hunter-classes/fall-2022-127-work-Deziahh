@@ -7,5 +7,7 @@ d["hello"] = "world"
 d["list"] = [2,3,4,4,6]
 d["list"] = 55.3
 
-person = {"first" : "John", "last" : "Smith", "age" : 50}
+person = {"first" : "John",
+          "last" : "Smith",
+          "age" : 50}
 person["age"] = person["age"] + 1
