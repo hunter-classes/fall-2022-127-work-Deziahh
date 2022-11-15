@@ -1,19 +1,34 @@
-pirateWords = {"Hello":"Ahoy",
-               "buddy":"matey"}
+pirateWords = {}
+l = []
 
 pirateKeys = list(pirateWords.keys())
 pirateValues = list(pirateWords.values())
 
+dictFile = open("pirate.dat.txt")
+dictFileData = dictFile.read()
+dictFileData = dictFileData.split("\n")
 
-file = open("input.txt")
-fileData = file.read()
-fileLines = fileData.split("\n")
+for word in dictFileData:
+    findColon = word.find(":")
+    colon = word[findColon + 1:]
+    l1 = l.append(colon)
 
-#print(list(pirateWords.keys())[0])
+pirateWords["hi"] = l[0]
+pirateWords["buddy"] = l[1]
+pirateWords["earlier"] = l[2]
+pirateWords["guys"] = l[3]
 
-fileLines = [line.replace(pirateKeys[0], pirateValues[0]) for line in fileLines]
-fileLines = [line.replace(pirateKeys[1], pirateValues[1]) for line in fileLines]
+textFile = open("input.txt")
+textFileData = textFile.read()
+textFileData = textFileData.split("\n")
 
+pirateKeys = list(pirateWords.keys())
+pirateValues = list(pirateWords.values())
 
-done = " ".join(fileLines)
+textFileData = [line.replace(pirateKeys[0], pirateValues[0]) for line in textFileData]
+textFileData = [line.replace(pirateKeys[1], pirateValues[1]) for line in textFileData]
+textFileData = [line.replace(pirateKeys[2], pirateValues[2]) for line in textFileData]
+textFileData = [line.replace(pirateKeys[3], pirateValues[3]) for line in textFileData]
+
+done = " ".join(textFileData)
 print(done)
