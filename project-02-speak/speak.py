@@ -1,3 +1,5 @@
+#Stored my translations in a file named pirate.dat
+
 pirateWords = {}
 l = []
 
