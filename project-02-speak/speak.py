@@ -6,7 +6,7 @@ l = []
 pirateKeys = list(pirateWords.keys())
 pirateValues = list(pirateWords.values())
 
-dictFile = open("pirate.dat.txt")
+dictFile = open("pirate.dat")
 dictFileData = dictFile.read()
 dictFileData = dictFileData.split("\n")
 
@@ -34,3 +34,6 @@ textFileData = [line.replace(pirateKeys[3], pirateValues[3]) for line in textFil
 
 done = " ".join(textFileData)
 print(done)
+
+textFile.close()
+dictFile.close()
