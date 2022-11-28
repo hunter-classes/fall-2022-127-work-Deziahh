@@ -34,3 +34,5 @@ textFileData = [line.replace(pirateKeys[3], pirateValues[3]) for line in textFil
 
 done = " ".join(textFileData)
 print(done)
+
+dictFile.close()
