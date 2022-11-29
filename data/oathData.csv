@@ -1,2 +1,2 @@
-ticket number, agency, first name, last name, borough, address, result, date
+ticket number, agency, respondant first name, respondant last name, violation borough, respondant address(borough), hearing result, hearing date
 4546309F0, DOHMH - BFSCS, , Very Good Bakery INC, Manhattan, Not NYC, Sustained, 04/28/2010
