@@ -1,3 +1,7 @@
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
+
 import csv
 
 reader = csv.DictReader(open("cereal.csv"))
@@ -5,7 +9,6 @@ data = [x for x in reader]
 
 def findPercentage(num1, total):
     return (num1 / total) * 100
-
 
 manufact = [x["mfr"] for x in data]
 
@@ -66,3 +69,20 @@ for item in type:
 total = len(type)
 result = findPercentage(hType, total)
 print(result, "percent of the cereal is hot.")
+
+#graph data:
+
+fig, ax = plt.subplots(figsize=(10,3), layout='constrained')
+categories = ['AHFP', 'General Mills', 'Kelloggs', 'Nabisco', 'Post', 'Quaker Oats', 'Ralston Purina']
+counts = [1, 22, 23, 6, 9, 8, 8]
+
+ax.bar(categories, counts);
+
+ax.set_ylim(0, 25)
+
+ax.set_ylabel('Amount of cereal by manufacture')
+ax.set_xlabel('Manufacture')
+ax.set_title('Cereal Supply by Manufacture')
+
+plt.show()
+reader.close()
